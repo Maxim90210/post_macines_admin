@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Locker Detail</title>
+</head>
+<body>
+    <h1>Locker ID: {{ locker.locker_id }}</h1>
+    <p>Location: {{ locker.location }}</p>
+    <p>Status: {{ locker.status }}</p>
+
+    <h2>Compartments</h2>
+    <ul>
+    {% for compartment in compartments %}
+        <li>
+            Compartment ID: {{ compartment.compartment_id }} - Size: {{ compartment.size }} - Status: {{ compartment.status }}
+        </li>
+    {% endfor %}
+    </ul>
+</body>
+</html>
